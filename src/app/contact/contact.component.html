@@ -1,0 +1,29 @@
+<div class="contact" @bounce>
+  <h2>Contact Me</h2>
+  <p>Feel free to reach out to me for any opportunities or collaborations.</p>
+
+  <ul>
+    <li>
+      Email:
+      <a href="mailto:{{ contactInfo.email[0] }}">{{ contactInfo.email[0] }}</a> |
+      <a href="mailto:{{ contactInfo.email[1] }}">{{ contactInfo.email[1] }}</a>
+    </li>
+    <li>
+      Phone: <a href="tel:{{ contactInfo.phone }}">{{ contactInfo.phone }}</a>
+    </li>
+    <li>
+      Location: {{ contactInfo.location }}
+    </li>
+  </ul>
+
+  <h3>Connect with Me</h3>
+  <ul>
+    @for (link of socialLinks; track link.name) {
+      <li>
+        <a [href]="link.url" target="_blank">
+          <i [class]="link.icon"></i> {{ link.name }}
+        </a>
+      </li>
+    }
+  </ul>
+</div>

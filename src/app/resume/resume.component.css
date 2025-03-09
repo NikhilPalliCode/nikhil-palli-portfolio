@@ -1,0 +1,32 @@
+/* resume.component.css */
+.resume {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  background: #0a192f; /* Dark blue background */
+  color: #ccd6f6; /* Light blue text for contrast */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+h2 {
+  color: #ccd6f6; /* Light blue for headings */
+}
+
+p, a {
+  color: #a8b2d1; /* Light blue-gray for text */
+}
+
+a {
+  background-color: #64ffda; /* Teal background for download link */
+  color: #0a192f; /* Dark text for download link */
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+a:hover {
+  background-color: #52d1b2; /* Darker teal on hover */
+}

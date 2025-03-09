@@ -1,0 +1,27 @@
+/* about.component.css */
+.about {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  background: #112240; /* Dark blue background */
+  color: #ccd6f6; /* Light blue text for contrast */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+.highlight {
+  color: #64ffda; /* Teal highlight */
+}
+
+h1, h2, h3 {
+  color: #ccd6f6; /* Light blue for headings */
+}
+
+.institution, .company, .duration {
+  color: #8892b0; /* Light gray for secondary text */
+}
+
+li {
+  color: #a8b2d1; /* Light blue-gray for list items */
+}
