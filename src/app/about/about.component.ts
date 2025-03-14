@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import { trigger, transition, query, style, stagger, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-about',
@@ -8,9 +8,13 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   styleUrls: ['./about.component.css'],
   animations: [
     trigger('slideIn', [
-      state('void', style({ transform: 'translateX(-100%)', opacity: 0 })), // Initial state
-      transition(':enter', [ // When the component is added to the DOM
-        animate('1s ease-out', style({ transform: 'translateX(0)', opacity: 1 }))
+      transition(':enter', [
+        query('.education-item, .experience-item', [
+          style({ opacity: 0, transform: 'translateX(-100%)' }),
+          stagger('100ms', [
+            animate('0.5s ease-out', style({ opacity: 1, transform: 'translateX(0)' }))
+          ])
+        ], { optional: true }) // Make the query optional
       ])
     ])
   ]

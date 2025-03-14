@@ -1,3 +1,4 @@
+// app.component.ts
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, RouterOutlet } from '@angular/router';
@@ -9,9 +10,11 @@ import { RouterModule, RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-
 export class AppComponent {
-  constructor() {
-    console.log('AppComponent initialized');
+  isNavCollapsed = false; // Default state: expanded
+
+  toggleNav() {
+    this.isNavCollapsed = !this.isNavCollapsed; // Toggle the state
+    console.log('Nav collapsed:', this.isNavCollapsed); // Debugging
   }
 }

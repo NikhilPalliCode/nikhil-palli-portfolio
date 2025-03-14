@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { TicTacToeComponent } from '../tic-tac-toe/tic-tac-toe.component'; // Import the Tic-Tac-Toe component
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, TicTacToeComponent], // Add TicTacToeComponent here
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
   animations: [

@@ -1,0 +1,25 @@
+<div class="tic-tac-toe">
+  <h2>Tic-Tac-Toe</h2>
+  <div *ngIf="winner; else gameBoard">
+    <p *ngIf="winner === 'Draw'">It's a draw!</p>
+    <p *ngIf="winner !== 'Draw'">Player {{ winner }} wins!</p>
+    <button (click)="resetGame()">Play Again</button>
+  </div>
+  <ng-template #gameBoard>
+    <div class="board">
+      @for (row of board; track row; let i = $index) {
+        <div class="row">
+          @for (cell of row; track cell; let j = $index) {
+            <div
+              class="cell"
+              (click)="makeMove(i, j)"
+            >
+              {{ cell }}
+            </div>
+          }
+        </div>
+      }
+    </div>
+    <p>Current Player: {{ currentPlayer }}</p>
+  </ng-template>
+</div>

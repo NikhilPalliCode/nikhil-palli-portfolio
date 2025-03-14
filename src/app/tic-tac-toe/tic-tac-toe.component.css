@@ -1,0 +1,48 @@
+.tic-tac-toe {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+    color: #ccd6f6; /* Light blue text */
+  }
+  
+  .board {
+    display: inline-block;
+    border: 2px solid #64ffda; /* Teal border */
+    background-color: #112240; /* Slightly lighter dark blue */
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  .cell {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #64ffda; /* Teal border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #0a192f; /* Dark blue background */
+    color: #64ffda; /* Teal text */
+  }
+  
+  .cell:hover {
+    background-color: #1f4068; /* Darker blue on hover */
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #64ffda; /* Teal button */
+    color: #0a192f; /* Dark text */
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #52d1b2; /* Darker teal on hover */
+  }

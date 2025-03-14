@@ -1,4 +1,3 @@
-/* about.component.css */
 .about {
   padding: 2rem;
   max-width: 800px;
@@ -18,10 +17,74 @@ h1, h2, h3 {
   color: #ccd6f6; /* Light blue for headings */
 }
 
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #64ffda; /* Teal for section headings */
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .institution, .company, .duration {
   color: #8892b0; /* Light gray for secondary text */
 }
 
 li {
   color: #a8b2d1; /* Light blue-gray for list items */
+}
+
+.education-item, .experience-item {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: #0a192f; /* Darker blue background */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-item:hover, .experience-item:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+ul {
+  list-style-type: disc; /* Bullet points for list items */
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6; /* Improve readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .education-item, .experience-item {
+    padding: 1rem;
+  }
 }

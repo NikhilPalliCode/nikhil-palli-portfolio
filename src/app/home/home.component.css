@@ -1,20 +1,34 @@
-/* home.component.css */
 .home {
   position: relative;
   padding: 2rem;
-  text-align: center; /* Center-align content */
-  background: linear-gradient(135deg, #0a192f, #172a45); /* Dark blue gradient */
+  background-color: #0a192f; /* Dark blue background */
   color: #ccd6f6; /* Light blue text for contrast */
   min-height: 100vh; /* Full height */
   display: flex;
-  flex-direction: column; /* Stack content vertically */
-  align-items: center;
-  justify-content: center;
+  flex-direction: row; /* Side-by-side layout */
+  align-items: flex-start; /* Align items to the top */
+  justify-content: space-between; /* Space between left and right panels */
+  gap: 2rem; /* Space between panels */
+}
+
+.left-panel {
+  width: 30%; /* Adjust width as needed */
+  max-width: 300px; /* Limit maximum width */
+  padding: 1rem;
+  background-color: #112240; /* Slightly lighter dark blue */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+.right-panel {
+  width: 70%; /* Adjust width as needed */
+  max-width: 800px; /* Limit maximum width */
+  padding: 1rem;
 }
 
 .profile-picture {
-  width: 150px; /* Adjusted size */
-  height: 150px; /* Adjusted size */
+  width: 280px; /* Adjusted size */
+  height: 280px; /* Adjusted size */
   margin: 1rem auto;
   display: block;
   border: 3px solid #64ffda; /* Teal border */
@@ -112,7 +126,18 @@ h1 {
 /* Responsive Design */
 @media (max-width: 768px) {
   .home {
-    padding: 1rem;
+    flex-direction: column; /* Stack panels vertically on small screens */
+    align-items: center;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 100%; /* Full width on small screens */
+    max-width: none;
+  }
+
+  .left-panel {
+    margin-bottom: 2rem; /* Space between panels */
   }
 
   .profile-picture {

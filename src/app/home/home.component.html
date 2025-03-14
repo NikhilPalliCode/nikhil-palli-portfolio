@@ -1,27 +1,39 @@
 <div class="home" @fadeIn>
-  <img src="assets/profile-pic.JPG" alt="Nikhil Palli" class="profile-picture">
-  <div class="content">
-    <h1>Hi, I'm <span class="highlight">Nikhil Palli</span></h1>
-    <p class="tagline">Turning Ideas into Reality with Code and Creativity</p>
-    <p class="intro">
-      I'm a passionate <span class="highlight">Information Technology and Management</span> student at Dallas Baptist University, specializing in software development, database management, and REST API design. I love building scalable, efficient, and user-friendly applications that solve real-world problems.
-    </p>
-    <div class="skills">
-      <h2>Skills & Technologies</h2>
-      <ul>
-        <li>Java</li>
-        <li>Angular</li>
-        <li>JavaScript</li>
-        <li>Spring Boot</li>
-        <li>REST APIs</li>
-        <li>MySQL</li>
-        <li>Tableau</li>
-        <li>Agile Methodology</li>
-      </ul>
-    </div>
-    <div class="cta">
-      <p>Let's build something amazing together!</p>
-      <a routerLink="/contact" class="cta-button">Get in Touch</a>
+  <!-- Left Panel: Tic-Tac-Toe Game -->
+  <div class="left-panel">
+    <h2>Play a Game!</h2>
+    <app-tic-tac-toe></app-tic-tac-toe>
+  </div>
+
+  <!-- Right Panel: Existing Content -->
+  <div class="right-panel">
+    <img src="assets/profile-pic.JPG" alt="Nikhil Palli" class="profile-picture">
+    <div class="content">
+      <h1>Hi, I'm <span class="highlight">Nikhil Palli</span></h1>
+      <p class="tagline">Turning Ideas into Reality with Code and Creativity</p>
+      <p class="intro">
+        I'm a passionate <span class="highlight">Information Technology and Management</span> student at Dallas Baptist University, specializing in software development, database management, and REST API design. I love building scalable, efficient, and user-friendly applications that solve real-world problems.
+      </p>
+      <div class="skills">
+        <h2>Skills & Technologies</h2>
+        <ul>
+          <li>Java Programming</li>
+          <li>Angular Framework Expertise</li>
+          <li>JavaScript Programming Skills</li>
+          <li>Spring Boot Development</li>
+          <li>REST API Design</li>
+          <li>MySQL Database Management</li>
+          <li>Oracle Database Management</li>
+          <li>Tableau Data Visualization</li>
+          <li>Agile Methodologies</li>
+          <li>Linux Proficiency</li>
+          <li>Git Repository Management</li>
+        </ul>
+      </div>
+      <div class="cta">
+        <p>Let's build something amazing together!</p>
+        <a routerLink="/contact" class="cta-button">Get in Touch</a>
+      </div>
     </div>
   </div>
 </div>
