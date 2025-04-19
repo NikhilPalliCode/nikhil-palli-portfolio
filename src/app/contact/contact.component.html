@@ -2,7 +2,7 @@
   <h2>Contact Me</h2>
   <p>Feel free to reach out to me for any opportunities or collaborations.</p>
 
-  <ul>
+  <ul class="contact-list">
     <li>
       Email:
       <a href="mailto:{{ contactInfo.email[0] }}">{{ contactInfo.email[0] }}</a> |
@@ -16,14 +16,29 @@
     </li>
   </ul>
 
+  <!-- Map Container -->
+  <div class="map-container">
+    <iframe 
+      width="65%" 
+      height="150" 
+      [src]="mapUrl"
+      style="border:0" 
+      allowfullscreen="" 
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
   <h3>Connect with Me</h3>
-  <ul>
+  <ul class="social-links">
     @for (link of socialLinks; track link.name) {
       <li>
-        <a [href]="link.url" target="_blank">
+        <a [href]="link.url" target="_blank" class="social-link">
           <i [class]="link.icon"></i> {{ link.name }}
         </a>
       </li>
     }
   </ul>
+
+  <a routerLink="/" class="back-to-home-button">Back to Home</a>
 </div>

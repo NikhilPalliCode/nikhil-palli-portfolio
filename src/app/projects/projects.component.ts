@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
+  imports: [RouterLink], // Add any necessary imports here
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css'],
   animations: [

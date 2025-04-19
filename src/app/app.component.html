@@ -1,20 +1,23 @@
-<!-- app.component.html -->
 <nav *ngIf="!isNavCollapsed">
   <button class="toggle-button" (click)="toggleNav()">
-    <i class="fas fa-times"></i> <!-- Close icon when nav is visible -->
+    <i class="fas fa-times"></i>
   </button>
   <div class="nav-container">
     <a routerLink="/">Home</a>
     <a routerLink="/about">About</a>
     <a routerLink="/projects">Projects</a>
     <a routerLink="/resume">Resume</a>
+    <a routerLink="/games">Games</a>
     <a routerLink="/contact">Contact</a>
+    
   </div>
 </nav>
 
-<!-- Show the toggle button when nav is collapsed -->
+<!-- Toggle button when nav is collapsed -->
 <button *ngIf="isNavCollapsed" class="toggle-button" (click)="toggleNav()">
-  <i class="fas fa-bars"></i> <!-- Hamburger icon when nav is collapsed -->
+  <i class="fas fa-bars"></i>
 </button>
+
+
 
 <router-outlet></router-outlet>

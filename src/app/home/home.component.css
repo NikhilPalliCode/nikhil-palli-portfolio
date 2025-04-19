@@ -11,21 +11,24 @@
   gap: 2rem; /* Space between panels */
 }
 
+/* Remove or comment out .left-panel (since it's no longer used) */
+/*
 .left-panel {
-  width: 30%; /* Adjust width as needed */
-  max-width: 300px; /* Limit maximum width */
+  width: 30%;
+  max-width: 300px;
   padding: 1rem;
-  background-color: #112240; /* Slightly lighter dark blue */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  background-color: #112240;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
+*/
 
 .right-panel {
-  width: 70%; /* Adjust width as needed */
-  max-width: 800px; /* Limit maximum width */
+  width: 100%; /* Take full available width */
+  max-width: 1200px; /* Increase max-width for larger screens */
   padding: 1rem;
+  margin: 0 auto; /* Center the content */
 }
-
 .profile-picture {
   width: 280px; /* Adjusted size */
   height: 280px; /* Adjusted size */
@@ -127,18 +130,16 @@ h1 {
 @media (max-width: 768px) {
   .home {
     flex-direction: column; /* Stack panels vertically on small screens */
-    align-items: center;
+    padding: 1rem; /* Reduce padding on mobile */
   }
 
-  .left-panel,
+
   .right-panel {
     width: 100%; /* Full width on small screens */
     max-width: none;
   }
 
-  .left-panel {
-    margin-bottom: 2rem; /* Space between panels */
-  }
+  
 
   .profile-picture {
     width: 120px; /* Slightly smaller on mobile */

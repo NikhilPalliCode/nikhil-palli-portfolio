@@ -11,10 +11,9 @@ import { RouterModule, RouterOutlet } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  isNavCollapsed = false; // Default state: expanded
+  isNavCollapsed = false;
 
   toggleNav() {
-    this.isNavCollapsed = !this.isNavCollapsed; // Toggle the state
-    console.log('Nav collapsed:', this.isNavCollapsed); // Debugging
+    this.isNavCollapsed = !this.isNavCollapsed;
   }
 }
