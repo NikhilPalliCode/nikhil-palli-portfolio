@@ -1,42 +1,78 @@
-/* projects.component.css */
 .projects {
   padding: 2rem;
   max-width: 800px;
   margin: 0 auto;
   text-align: left;
-  background: #112240; /* Dark blue background */
-  color: #ccd6f6; /* Light blue text for contrast */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  background: #112240;
+  color: #ccd6f6;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  min-height: calc(100vh - 120px); /* Ensure full height */
 }
 
-h2, h3 {
-  color: #ccd6f6; /* Light blue for headings */
+h2 {
+  color: #ccd6f6;
+  margin-bottom: 1.5rem;
+}
+
+.project {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.project:last-child {
+  border-bottom: none;
+}
+
+h3 {
+  color: #64ffda;
+  margin-bottom: 0.5rem;
 }
 
 p {
-  color: #a8b2d1; /* Light blue-gray for text */
+  color: #a8b2d1;
+  margin-bottom: 1rem;
 }
 
 .view-project-button {
-  background-color: #64ffda; /* Teal background for buttons */
-  color: #0a192f; /* Dark text for buttons */
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #64ffda;
+  color: #0a192f;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.view-project-button:hover {
+  background-color: #52d1b2;
+  transform: translateY(-2px);
 }
 
 .back-to-home-button {
   display: inline-block;
-  padding: 8px 16px;
+  padding: 0.75rem 1.5rem;
   background-color: transparent;
   color: #64ffda;
   border: 1px solid #64ffda;
   border-radius: 4px;
   text-decoration: none;
-  font-size: 0.9rem;
-  margin-top: 1rem;
-  transition: all 0.2s ease;
+  font-size: 1rem;
+  margin-top: 2rem;
+  transition: all 0.3s ease;
 }
 
 .back-to-home-button:hover {
   background-color: rgba(100, 255, 218, 0.1);
   transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .projects {
+    padding: 1.5rem;
+    min-height: calc(100vh - 100px);
+  }
 }
