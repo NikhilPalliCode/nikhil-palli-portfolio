@@ -1,0 +1,99 @@
+.games-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center; /* Centers all child elements */
+}
+
+.game-nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center; /* Center game navigation */
+}
+
+.game-nav a {
+  padding: 0.5rem 1rem;
+  background: #112240;
+  border-radius: 4px;
+  color: #64ffda;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.game-nav a.active {
+  background: #64ffda;
+  color: #0a192f;
+}
+
+.game-nav a:hover {
+  transform: translateY(-2px);
+}
+
+.game-content {
+  background: #112240;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: fit-content;
+  margin: 0 auto 1rem auto;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.close-game-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #ff4757;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
+}
+
+.close-game-button:hover {
+  background: #ff6b81;
+  transform: scale(1.05);
+}
+
+.back-to-home-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: transparent;
+  color: #64ffda;
+  border: 1px solid #64ffda;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  transition: all 0.2s ease;
+}
+
+.back-to-home-button:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+  transform: translateY(-2px);
+}
+
+.games-container h2 {
+  color: white;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .game-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .game-content {
+    padding: 1rem;
+    width: 95%;
+  }
+}

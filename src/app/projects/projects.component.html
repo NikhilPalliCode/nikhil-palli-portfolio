@@ -1,4 +1,4 @@
-<div class="projects" @fadeIn>
+<div class="projects">
   <h2>Projects</h2>
   @for (project of projects; track project.title) {
     <div class="project">
@@ -9,4 +9,5 @@
       </a>
     </div>
   }
+  <a routerLink="/" class="back-to-home-button">Back to Home</a>
 </div>

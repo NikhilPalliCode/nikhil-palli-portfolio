@@ -1,0 +1,16 @@
+<div class="games-container">
+  <h2>Game Collection</h2>
+  <nav class="game-nav">
+    <a routerLink="tic-tac-toe" routerLinkActive="active">Tic-Tac-Toe</a>
+  </nav>
+  
+  @if (activeGame) {
+    <div class="game-content">
+      <button class="close-game-button" (click)="closeGame()">✕ Close</button>
+      <router-outlet></router-outlet>
+    </div>
+    <a routerLink="/" class="back-to-home-button">← Back to Home</a>
+  } @else {
+    <a routerLink="/" class="back-to-home-button">← Back to Home</a>
+  }
+</div>

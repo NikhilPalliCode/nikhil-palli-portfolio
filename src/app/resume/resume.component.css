@@ -1,32 +1,70 @@
-/* resume.component.css */
 .resume {
   padding: 2rem;
   max-width: 800px;
   margin: 0 auto;
   text-align: left;
-  background: #0a192f; /* Dark blue background */
-  color: #ccd6f6; /* Light blue text for contrast */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  background: #0a192f;
+  color: #ccd6f6;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 h2 {
-  color: #ccd6f6; /* Light blue for headings */
+  color: #ccd6f6;
+  margin-bottom: 1rem;
 }
 
-p, a {
-  color: #a8b2d1; /* Light blue-gray for text */
+p {
+  color: #a8b2d1;
+  margin-bottom: 2rem;
 }
 
-a {
-  background-color: #64ffda; /* Teal background for download link */
-  color: #0a192f; /* Dark text for download link */
-  padding: 0.5rem 1rem;
+/* Updated button group styles */
+.button-group {
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  gap: 1rem;
+  margin-top: 2rem;
+  align-items: flex-start; /* Align left, or use 'center' for centered buttons */
+}
+
+/* Shared button styles */
+.download-button,
+.back-to-home-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px; /* Equal width for both buttons */
+  padding: 0.75rem 1.5rem;
   border-radius: 4px;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  height: 44px;
+  box-sizing: border-box;
+  text-align: center;
 }
 
-a:hover {
-  background-color: #52d1b2; /* Darker teal on hover */
+/* Individual button styles */
+.download-button {
+  background-color: #64ffda;
+  color: #0a192f;
+  border: 2px solid transparent;
+}
+
+.back-to-home-button {
+  background-color: transparent;
+  color: #64ffda;
+  border: 2px solid #64ffda;
+}
+
+/* Hover effects */
+.download-button:hover {
+  background-color: #52d1b2;
+  transform: translateY(-2px);
+}
+
+.back-to-home-button:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+  transform: translateY(-2px);
 }

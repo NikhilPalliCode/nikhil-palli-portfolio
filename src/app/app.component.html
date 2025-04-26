@@ -1,20 +1,39 @@
-<!-- app.component.html -->
-<nav *ngIf="!isNavCollapsed">
-  <button class="toggle-button" (click)="toggleNav()">
-    <i class="fas fa-times"></i> <!-- Close icon when nav is visible -->
-  </button>
-  <div class="nav-container">
-    <a routerLink="/">Home</a>
-    <a routerLink="/about">About</a>
-    <a routerLink="/projects">Projects</a>
-    <a routerLink="/resume">Resume</a>
-    <a routerLink="/contact">Contact</a>
+<!-- Horizontal Navbar for Desktop -->
+<nav class="desktop-nav" *ngIf="!isMobileView">
+  <div class="nav-links">
+    <a routerLink="/" [class.active]="currentRoute === '/'">Home</a>
+    <a routerLink="/about" [class.active]="currentRoute === '/about'">About</a>
+    <a routerLink="/projects" [class.active]="currentRoute === '/projects'">Projects</a>
+    <a routerLink="/resume" [class.active]="currentRoute === '/resume'">Resume</a>
+    <a routerLink="/games" [class.active]="currentRoute === '/games'">Games</a>
+    <a routerLink="/contact" [class.active]="currentRoute === '/contact'">Contact</a>
   </div>
 </nav>
 
-<!-- Show the toggle button when nav is collapsed -->
-<button *ngIf="isNavCollapsed" class="toggle-button" (click)="toggleNav()">
-  <i class="fas fa-bars"></i> <!-- Hamburger icon when nav is collapsed -->
-</button>
+<!-- Mobile Navigation -->
+<div *ngIf="isMobileView">
+  <!-- Toggle button -->
+  <button class="toggle-button" (click)="toggleNav()">
+    <i class="fas fa-bars"></i>
+  </button>
 
-<router-outlet></router-outlet>
+  <!-- Sidebar Navigation -->
+  <nav class="sidebar" [class.open]="!isNavCollapsed">
+    <div class="nav-links">
+      <a routerLink="/" [class.active]="currentRoute === '/'">Home</a>
+      <a routerLink="/about" [class.active]="currentRoute === '/about'">About</a>
+      <a routerLink="/projects" [class.active]="currentRoute === '/projects'">Projects</a>
+      <a routerLink="/resume" [class.active]="currentRoute === '/resume'">Resume</a>
+      <a routerLink="/games" [class.active]="currentRoute === '/games'">Games</a>
+      <a routerLink="/contact" [class.active]="currentRoute === '/contact'">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Overlay when sidebar is open -->
+  <div class="overlay" [class.active]="!isNavCollapsed" (click)="isNavCollapsed = true"></div>
+</div>
+
+<!-- Main content area -->
+<main class="content">
+  <router-outlet></router-outlet>
+</main>
